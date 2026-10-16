@@ -1,0 +1,31 @@
+:root {
+  --ds-font-family:
+    'Roboto',
+    Arial,
+    sans-serif;
+
+  --ds-font-size-xs: 12px;
+  --ds-font-size-sm: 14px;
+  --ds-font-size-md: 16px;
+  --ds-font-size-lg: 20px;
+  --ds-font-size-xl: 24px;
+
+  --ds-font-weight-regular: 400;
+  --ds-font-weight-medium: 500;
+  --ds-font-weight-bold: 700;
+}
+
+html,
+body {
+  font-family: var(--ds-font-family);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

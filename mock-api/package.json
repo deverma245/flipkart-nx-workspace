@@ -1,0 +1,19 @@
+{
+  "name": "@flipkart/mock-api",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./browser": {
+      "types": "./dist/src/browser.d.ts",
+      "import": "./dist/src/browser.js"
+    },
+    "./server": {
+      "types": "./dist/src/server.d.ts",
+      "import": "./dist/src/server.js"
+    }
+  }
+}

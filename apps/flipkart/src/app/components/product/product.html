@@ -1,0 +1,95 @@
+<div class="product-page">
+
+  <header class="product-header">
+    <div>
+      <h1>Products</h1>
+      <p>Explore our latest products</p>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button
+        type="button"
+        class="pagination-button"
+        [disabled]="productsResource.isLoading() || page() === 1"
+        (click)="previousPage()"
+      >
+        ← Prev
+      </button>
+
+      <span class="page-number">
+        Page {{ page() }}
+      </span>
+
+      <button
+        type="button"
+        class="pagination-button"
+        [disabled]="productsResource.isLoading() || total() < limit()"
+        (click)="nextPage()"
+      >
+        Next →
+      </button>
+    </div>
+  </header>
+
+  <section class="product-grid">
+    @if(productsResource.isLoading()) {
+        <div class="loading">
+        Loading products...
+        </div>
+    } @else if(productsResource.error()) {
+        <div class="error">
+        Failed to load products.
+        </div>
+    } @else if(products().length === 0) {
+            <div class="empty-state">
+      <h2>No products found</h2>
+      <p>There are currently no products available.</p>
+    </div>
+    } @else {
+        <!-- <pre>{{products() |json }}</pre> -->
+        @for (product of products(); track product.id) {
+        <article class="product-card">
+
+            <!-- <div class="product-image">
+            <img
+                [src]="product?.image"
+                [alt]="product.name"
+            />
+            </div> -->
+
+            <div class="product-info">
+
+            <span class="product-category">
+                {{ product.category | titlecase }}
+            </span>
+            
+            <h2 class="product-id">
+                {{ product.id }}
+            </h2>
+            <h2 class="product-name">
+                {{ product.name }}
+            </h2>
+
+            <div class="product-footer">
+                <span class="product-price">
+                ₹{{ product.price | number }}
+                </span>
+
+                <button
+                type="button"
+                class="add-to-cart"
+                >
+                Add to Cart
+                </button>
+            </div>
+
+            </div>
+
+        </article>
+        }
+    }
+
+  </section>
+
+</div>

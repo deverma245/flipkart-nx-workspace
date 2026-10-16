@@ -1,0 +1,33 @@
+.ds-button {
+  border: 0;
+  border-radius: var(--ds-radius-md);
+
+  padding:
+    var(--ds-spacing-sm)
+    var(--ds-spacing-md);
+
+  font-family: var(--ds-font-family);
+  font-weight: var(--ds-font-weight-medium);
+
+  cursor: pointer;
+
+  &--primary {
+    background: var(--ds-color-primary);
+    color: white;
+  }
+
+  &--secondary {
+    background: transparent;
+    color: var(--ds-color-primary);
+  }
+
+  &--danger {
+    background: var(--ds-color-danger);
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,12 @@
+
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 56px minmax(0, 1fr);
+}
+
+.body {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+}

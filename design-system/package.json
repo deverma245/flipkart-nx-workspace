@@ -1,0 +1,10 @@
+{
+  "name": "@flipkart/design-system",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./styles": {
+      "sass": "./src/styles/styles.scss"
+    }
+  }
+}

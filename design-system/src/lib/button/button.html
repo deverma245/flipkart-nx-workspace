@@ -1,0 +1,9 @@
+<button
+  class="ds-button"
+  [class.ds-button--primary]="variant() === 'primary'"
+  [class.ds-button--secondary]="variant() === 'secondary'"
+  [class.ds-button--danger]="variant() === 'danger'"
+  [disabled]="disabled()"
+>
+  <ng-content />
+</button>

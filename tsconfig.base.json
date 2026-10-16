@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "bundler",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": false,
+    "paths": {
+      "@flipkart/design-system": ["design-system/src/index.ts"],
+      "@flipkart/mock-api": ["./mock-api/src/index.ts"],
+      "@flipkart/shared-http": ["./shared/http/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

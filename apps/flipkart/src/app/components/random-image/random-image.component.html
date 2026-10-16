@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="left-container">
+        <div class="image-url">
+            <input [value]="imageUrl()" name="imageUrl" />
+            <button (click)="handleClick()">Fetch</button>
+        </div>
+        <pre>
+            {{imageGeneratorResponse() | json}}
+        </pre>
+    </div>
+    <div class="right-container">
+        <div class="image-container">
+            <img [src]="imageUrl()" />        
+        </div>
+    </div>
+
+</div>
